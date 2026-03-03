@@ -1,34 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Metadatos de seguridad y compatibilidad -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Security Headers (protección contra XSS y clickjacking) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-src https://www.google.com;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+    
     <title>MagosysTech - Soluciones IT Profesionales</title>
     <meta name="description" content="Soporte técnico integral, redes, seguridad y monitoreo para empresas en Buenos Aires. Mantenemos tu infraestructura 24/7.">
-    <!-- CSS Principal -->
-    <link rel="stylesheet" href="css/main.css">
-    <!-- Favicon (crea uno en assets/icons/) -->
+    <meta name="keywords" content="soporte técnico, redes, seguridad informática, monitoreo, Buenos Aires">
+    <meta name="author" content="MagosysTech">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:title" content="MagosysTech - Soluciones IT Profesionales">
+    <meta property="og:description" content="Soporte técnico integral para empresas en Buenos Aires">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://magosystech.github.io">
+    <meta property="og:image" content="https://magosystech.github.io/assets/images/og-image.jpg">
+    
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" href="css/main.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
 </head>
 <body>
-    <!-- HEADER CON NAVEGACIÓN (con tu estilo elegante) -->
+    <!-- HEADER CON NAVEGACIÓN -->
     <header class="navbar">
         <div class="container">
             <div class="logo">
                 <span class="logo-bold">M</span>agosysTech
             </div>
             
-            <!-- Menú Hamburguesa (para móvil) -->
-            <button class="menu-toggle" aria-label="Abrir menú">
+            <!-- Menú Hamburguesa -->
+            <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
             <!-- Navegación principal -->
-            <nav>
+            <nav aria-label="Navegación principal">
                 <ul class="nav-links">
-                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#inicio" aria-current="page">Inicio</a></li>
                     <li><a href="#servicios">Servicios</a></li>
                     <li><a href="#clientes">Clientes</a></li>
                     <li><a href="#beneficios">Beneficios</a></li>
@@ -39,7 +66,7 @@
     </header>
 
     <main>
-        <!-- HERO SECTION (con tu diseño elegante) -->
+        <!-- HERO SECTION -->
         <section id="inicio" class="hero">
             <div class="container">
                 <div class="hero-content">
@@ -72,7 +99,7 @@
             </div>
         </section>
 
-        <!-- SERVICIOS (tu diseño elegante con tarjetas) -->
+        <!-- SERVICIOS -->
         <section id="servicios" class="servicios">
             <div class="container">
                 <div class="section-header">
@@ -155,7 +182,7 @@
             </div>
         </section>
 
-        <!-- CLIENTES (tu diseño elegante) -->
+        <!-- CLIENTES -->
         <section id="clientes" class="clientes">
             <div class="container">
                 <div class="section-header centered">
@@ -173,7 +200,7 @@
             </div>
         </section>
 
-        <!-- BENEFICIOS (tu diseño elegante) -->
+        <!-- BENEFICIOS -->
         <section id="beneficios" class="beneficios">
             <div class="container">
                 <div class="beneficios-grid">
@@ -196,7 +223,7 @@
             </div>
         </section>
 
-        <!-- CONTACTO - REDISEÑADO SIN FORMULARIO, CON BOTONES REALES -->
+        <!-- CONTACTO - Con botones reales a WhatsApp e Instagram -->
         <section id="contacto" class="contacto">
             <div class="container">
                 <div class="contacto-wrapper">
@@ -204,7 +231,6 @@
                         <span class="section-subtitle">▸ Contacto</span>
                         <h2 class="contacto-title">¿Necesitas mejorar tu infraestructura IT?</h2>
                         <p class="contacto-description">
-            <!-- SECCIÓN CONTACTO (continuación) -->
                             Estamos en Buenos Aires y damos soporte a empresas de todo el país. 
                             Respondemos en menos de 2 horas.
                         </p>
@@ -222,24 +248,27 @@
                                 <span class="detail-value">+54 11 1234-5678</span>
                             </div>
                         </div>
-                        <!-- BOTONES DE CONTACTO REALES (Punto 3 de tu requerimiento) -->
+                        
+                        <!-- BOTONES DE CONTACTO REALES -->
                         <div class="contacto-social">
                             <a href="https://wa.me/5491123456789?text=Hola%20MagosysTech,%20me%20contacto%20desde%20su%20web%20para%20consultar%20por%20sus%20servicios" 
                                class="btn btn-wsp" 
                                target="_blank" 
-                               rel="noopener noreferrer">
+                               rel="noopener noreferrer nofollow"
+                               aria-label="Contactar por WhatsApp">
                                 📱 WhatsApp
                             </a>
                             <a href="https://instagram.com/magosystech" 
                                class="btn btn-ig" 
                                target="_blank" 
-                               rel="noopener noreferrer">
+                               rel="noopener noreferrer nofollow"
+                               aria-label="Visitar Instagram">
                                 📸 Instagram
                             </a>
                         </div>
                     </div>
                     
-                    <!-- Mapa o ubicación visual (opcional) -->
+                    <!-- Mapa de ubicación -->
                     <div class="contacto-map">
                         <div class="map-placeholder">
                             <iframe 
@@ -279,6 +308,6 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

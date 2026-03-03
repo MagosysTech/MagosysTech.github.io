@@ -1,61 +1,66 @@
-// main.js - Interactividad mínima y limpia
+// main.js - Modo estricto para mejor seguridad
+'use strict';
 
-// 1. MENÚ HAMBURGUESA
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    
-    if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-            
-            // Animación del icono hamburguesa
-            const spans = this.querySelectorAll('span');
-            spans.forEach(span => span.classList.toggle('active'));
-        });
+// IIFE para evitar contaminación del ámbito global
+(function() {
+    // DOM Ready
+    document.addEventListener('DOMContentLoaded', function() {
+        initMobileMenu();
+        initSmoothScroll();
+        initSecurityHeaders();
+    });
+
+    // Menú hamburguesa
+    function initMobileMenu() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
         
-        // Cerrar menú al hacer clic en un enlace
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', function() {
+                const expanded = this.getAttribute('aria-expanded') === 'true' ? false : true;
+                this.setAttribute('aria-expanded', expanded);
+                navLinks.classList.toggle('active');
+            });
+        }
+    }
+
+    // Smooth scroll
+    function initSmoothScroll() {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const target = document.querySelector(targetId);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
         });
     }
-    
-    // 2. SCROLL SUAVE PARA ENLACES INTERNOS
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-    
-    // 3. (Opcional) Active link highlighting mientras se hace scroll
-    const sections = document.querySelectorAll('section[id]');
-    const navItems = document.querySelectorAll('.nav-links a');
-    
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            const sectionHeight = section.clientHeight;
-            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-                current = section.getAttribute('id');
-            }
-        });
-        
-        navItems.forEach(item => {
-            item.classList.remove('active');
-            if (item.getAttribute('href') === `#${current}`) {
-                item.classList.add('active');
-            }
-        });
-    });
-});
+
+    // Verificar headers de seguridad (solo para desarrollo)
+    function initSecurityHeaders() {
+        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+            console.log('🔒 Modo desarrollo - verificando seguridad...');
+            // Aquí puedes agregar verificaciones locales
+        }
+    }
+
+    // Prevenir clickjacking (medida extra de seguridad)
+    if (self === top) {
+        // La página no está en un iframe - todo bien
+    } else {
+        // La página está en un iframe - redirigir
+        top.location = self.location;
+    }
+})();
+
+// Exportar para pruebas (si es necesario)
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { initMobileMenu, initSmoothScroll };
+}

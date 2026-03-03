@@ -1,0 +1,33 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos de editor
+.vscode/
+.idea/
+*.swo
+*.swp
+*.sublime-*
+
+# Archivos temporales
+*.log
+*.tmp
+*.temp
+.cache/
+
+# Archivos de entorno (seguridad)
+.env
+.env.local
+.env.*.local
+
+# Archivos de respaldo
+*.bak
+*.backup
+
+# Carpeta node_modules (si usas npm)
+node_modules/
+
+# Credenciales (NUNCA subir)
+**/secrets.*
+**/config.private.*
