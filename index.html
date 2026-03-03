@@ -1,291 +1,396 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Metadatos de seguridad y compatibilidad -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <!-- Security Headers (protección contra XSS y clickjacking) -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-src https://www.google.com;">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
-    
-    <title>MagosysTech - Automatizaciones Empresariales</title>
-    <meta name="description" content="Soporte técnico integral, redes, seguridad y monitoreo para empresas en Buenos Aires. Mantenemos tu infraestructura 24/7.">
-    <meta name="keywords" content="soporte técnico, seguridad informática, monitoreo, Venezuela">
+    <!-- Meta Tags SEO -->
+    <title>MagosysTech | Soluciones IT en Cumaná, Venezuela</title>
+    <meta name="description" content="Expertos en soporte técnico, desarrollo web y soluciones tecnológicas para empresas en Cumaná y todo el oriente de Venezuela. ¡Transformamos tu negocio!">
+    <meta name="keywords" content="soporte técnico Cumaná, desarrollo web Venezuela, soluciones IT, cámaras seguridad, redes empresariales">
     <meta name="author" content="MagosysTech">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph / Redes Sociales -->
-    <meta property="og:title" content="MagosysTech - Automatizacion profesional para tu empresa">
-    <meta property="og:description" content="Soporte técnico integral para empresas en Venezuela">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://magosystech.github.io">
-    <meta property="og:image" content="https://magosystech.github.io/assets/images/og-image.jpg">
-    
+    <meta property="og:url" content="https://magosystech.github.io/MagosysTechWeb/">
+    <meta property="og:title" content="MagosysTech - Soluciones IT Profesionales">
+    <meta property="og:description" content="Transformamos tu negocio con tecnología de vanguardia en Cumaná, Venezuela">
+    <meta property="og:image" content="https://magosystech.github.io/MagosysTechWeb/assets/og-image.jpg">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MagosysTech - Soluciones IT">
+    <meta name="twitter:description" content="Expertos en tecnología para tu negocio">
+
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
-    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
-    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+    <!-- Google Analytics (reemplaza G-XXXXXXXXXX con tu ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
     
-    <!-- Preload de recursos críticos -->
-    <link rel="preload" href="css/main.css" as="style">
-    <link rel="preload" href="js/main.js" as="script">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- HEADER CON NAVEGACIÓN -->
-    <header class="navbar">
-        <div class="container">
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-container">
             <div class="logo">
-                <span class="logo-bold">M</span>agosysTech
+                <a href="#inicio">
+                    <img src="assets/logo.png" alt="MagosysTech Logo">
+                </a>
             </div>
             
-            <!-- Menú Hamburguesa -->
-            <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
             </button>
-
-            <!-- Navegación principal -->
-            <nav aria-label="Navegación principal">
-                <ul class="nav-links">
-                    <li><a href="#inicio" aria-current="page">Inicio</a></li>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#clientes">Clientes</a></li>
-                    <li><a href="#beneficios">Beneficios</a></li>
-                    <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+                    <li><a href="#portafolio">Portafolio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
+            
+            <button class="theme-switch" aria-label="Cambiar tema">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
     </header>
 
     <main>
         <!-- HERO SECTION -->
         <section id="inicio" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <span class="badge">Tecnología que impulsa tu negocio</span>
-                    <h1 class="hero-title">
-                        Soluciones TI<span class="gradient-text"> Eficiencia tecnologica para tu empresa</span>
-                    </h1>
-                    <p class="hero-description">
-                        Soporte técnico integral,seguridad y monitoreo para empresas en Venezuela. Mantenemos tu infraestructura tecnológica funcionando 24/7.
-                    </p>
+            <div class="container hero-container">
+                <div class="hero-content reveal-left">
+                    <h1>Soluciones IT profesionales en <span class="highlight">Cumaná</span> para tu negocio</h1>
+                    <p>Soporte técnico, desarrollo web, redes y seguridad. Transformamos tu empresa con tecnología de vanguardia.</p>
                     <div class="hero-buttons">
-                        <a href="#servicios" class="btn btn-primary">Nuestros servicios</a>
-                        <a href="#contacto" class="btn btn-secondary">Contactar ahora</a>
+                        <a href="#contacto" class="btn btn-primary">Solicitar asesoría</a>
+                        <a href="#servicios" class="btn btn-outline">Ver servicios</a>
                     </div>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <span class="stat-number">+50</span>
-                            <span class="stat-label">Empresas confían</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">24/7</span>
-                            <span class="stat-label">Soporte continuo</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">1h</span>
-                            <span class="stat-label">Tiempo de respuesta</span>
-                        </div>
-                    </div>
+                </div>
+                <div class="hero-image reveal-right">
+                    <img src="assets/hero.webp" alt="Soluciones tecnológicas" loading="lazy">
                 </div>
             </div>
         </section>
 
-        <!-- SERVICIOS -->
+        <!-- SERVICIOS SECTION -->
         <section id="servicios" class="servicios">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-subtitle">▸ Qué hacemos</span>
-                    <h2 class="section-title">Servicios especializados para tu empresa</h2>
-                    <p class="section-description">Soluciones adaptadas a tus necesidades con los más altos estándares de calidad.</p>
-                </div>
-
+                <h2 class="section-title reveal">Nuestros Servicios</h2>
+                <p class="section-subtitle reveal">Soluciones tecnológicas adaptadas a las necesidades de tu empresa</p>
+                
                 <div class="servicios-grid">
-                    <!-- Servicio 1: Destacado -->
-                    <div class="servicio-card featured">
-                        <div class="servicio-icon">💻</div>
-                        <h3>Soporte TI Integral</h3>
-                        <p class="servicio-desc">Mesa de ayuda y mantenimiento especializado</p>
-                        <ul class="servicio-list">
-                            <li>✓ Mesa de ayuda dedicada</li>
-                            <li>✓ Mantenimiento preventivo</li>
-                            <li>✓ Resolución de incidentes</li>
-                            <li>✓ Documentación técnica</li>
-                        </ul>
-                        <a href="#contacto" class="card-link">Solicitar información →</a>
-                    </div>
-
-                    <!-- Servicio 2 -->
-                    <div class="servicio-card">
-                        <div class="servicio-icon">🌐</div>
-                        <h3>Redes Corporativas</h3>
-                        <p class="servicio-desc">Redes estables y seguras</p>
-                        <ul class="servicio-list">
-                            <li>✓ Configuración Gateway/Router</li>
-                            <li>✓ WiFi empresarial</li>
-                            <li>✓ Optimización de red</li>
-                            <li>✓ Troubleshooting avanzado</li>
-                        </ul>
-                        <a href="#contacto" class="card-link">Consultar →</a>
-                    </div>
-
-                    <!-- Servicio 3 -->
-                    <div class="servicio-card">
-                        <div class="servicio-icon">🔒</div>
-                        <h3>Acceso Remoto Seguro</h3>
-                        <p class="servicio-desc">Trabajo remoto con máxima seguridad</p>
-                        <ul class="servicio-list">
-                            <li>✓ Implementación de VPN</li>
-                            <li>✓ Configuración segura</li>
-                            <li>✓ Acceso corporativo</li>
-                            <li>✓ Protección de datos</li>
-                        </ul>
-                        <a href="#contacto" class="card-link">Consultar →</a>
-                    </div>
-
-                    <!-- Servicio 4 -->
-                    <div class="servicio-card">
-                        <div class="servicio-icon">📊</div>
-                        <h3>Monitoreo 24/7</h3>
-                        <p class="servicio-desc">Control total de tu infraestructura</p>
-                        <ul class="servicio-list">
-                            <li>✓ Tableros personalizados</li>
-                            <li>✓ Alertas en tiempo real</li>
-                            <li>✓ Métricas de rendimiento</li>
-                            <li>✓ Reportes automáticos</li>
-                        </ul>
-                        <a href="#contacto" class="card-link">Consultar →</a>
-                    </div>
-
-                    <!-- Servicio 5 -->
-                    <div class="servicio-card">
-                        <div class="servicio-icon">📹</div>
-                        <h3>Videovigilancia IP</h3>
-                        <p class="servicio-desc">Seguridad física para tus instalaciones</p>
-                        <ul class="servicio-list">
-                            <li>✓ Cámaras IP profesionales</li>
-                            <li>✓ Instalación NVR/DVR</li>
-                            <li>✓ Acceso remoto</li>
-                            <li>✓ Grabación continua</li>
-                        </ul>
-                        <a href="#contacto" class="card-link">Consultar →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CLIENTES -->
-        <section id="clientes" class="clientes">
-            <div class="container">
-                <div class="section-header centered">
-                    <span class="section-subtitle">▸ Confianza</span>
-                    <h2 class="section-title">Empresas que ya confían en nosotros</h2>
-                </div>
-                <div class="clientes-grid">
-                    <div class="cliente-item">Proximamente</div>
-                    <div class="cliente-item">Proximamente</div>
-                    <div class="cliente-item">Proximamente</div>
-                    <div class="cliente-item">Proximamente</div>
-                    <div class="cliente-item">Proximamente</div>
-                    <div class="cliente-item">Proximamente</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- BENEFICIOS -->
-        <section id="beneficios" class="beneficios">
-            <div class="container">
-                <div class="beneficios-grid">
-                    <div class="beneficio-item">
-                        <span class="beneficio-number">01</span>
-                        <h4>Respuesta inmediata</h4>
-                        <p>Compromiso de respuesta en menos de 1 horas hábil.</p>
-                    </div>
-                    <div class="beneficio-item">
-                        <span class="beneficio-number">02</span>
-                        <h4>Equipo certificado</h4>
-                        <p>Profesionales especializados en multiples areas</p>
-                    </div>
-                    <div class="beneficio-item">
-                        <span class="beneficio-number">03</span>
-                        <h4>Soporte 24/7</h4>
-                        <p>Disponibilidad permanente para emergencias.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACTO - Con botones reales a WhatsApp e Instagram -->
-        <section id="contacto" class="contacto">
-            <div class="container">
-                <div class="contacto-wrapper">
-                    <div class="contacto-info">
-                        <span class="section-subtitle">▸ Contacto</span>
-                        <h2 class="contacto-title">¿Necesitas mejorar tu infraestructura IT?</h2>
-                        <p class="contacto-description">
-                            Estamos en el Venezuela Estado sucre y damos soporte a empresas de todo el país. 
-                            Respondemos en menos de 1 horas.
-                        </p>
-                        <div class="contacto-details">
-                            <div class="contacto-detail">
-                                <span class="detail-label">📍 Ubicación</span>
-                                <span class="detail-value">Estado Sucre, Cumana</span>
-                            </div>
-                            <div class="contacto-detail">
-                                <span class="detail-label">📧 Email</span>
-                                <span class="detail-value">Magosystech@gmail.com</span>
-                            </div>
-                            <div class="contacto-detail">
-                                <span class="detail-label">📞 Teléfono</span>
-                                <span class="detail-value">+58 04248320442</span>
-                            </div>
+                    <div class="service-card reveal" data-delay="100">
+                        <div class="service-icon">
+                            <i class="fas fa-laptop-code"></i>
                         </div>
-                        
-                        <!-- BOTONES DE CONTACTO REALES -->
-                        <div class="contacto-social">
-                            <a href="https://wa.me/5491123456789?text=Hola%20MagosysTech,%20me%20contacto%20desde%20su%20web%20para%20consultar%20por%20sus%20servicios" 
-                               class="btn btn-wsp" 
-                               target="_blank" 
-                               rel="noopener noreferrer nofollow"
-                               aria-label="Contactar por WhatsApp">
-                                📱 WhatsApp
-                            </a>
-                            <a href="https://instagram.com/magosystech" 
-                               class="btn btn-ig" 
-                               target="_blank" 
-                               rel="noopener noreferrer nofollow"
-                               aria-label="Visitar Instagram">
-                                📸 Instagram
-                            </a>
+                        <h3>Desarrollo Web</h3>
+                        <p>Sitios web profesionales, tiendas online y sistemas a medida para tu negocio.</p>
+                        <a href="#" class="service-link">Ver más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="service-card reveal" data-delay="200">
+                        <div class="service-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>Redes y Conectividad</h3>
+                        <p>Instalación y configuración de redes corporativas, wifi y servidores.</p>
+                        <a href="#" class="service-link">Ver más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="service-card reveal" data-delay="300">
+                        <div class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Seguridad</h3>
+                        <p>Cámaras de vigilancia, control de acceso y sistemas de alarmas.</p>
+                        <a href="#" class="service-link">Ver más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="service-card reveal" data-delay="400">
+                        <div class="service-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Soporte Técnico</h3>
+                        <p>Mantenimiento preventivo y correctivo, soporte remoto y presencial.</p>
+                        <a href="#" class="service-link">Ver más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTAFOLIO SECTION -->
+        <section id="portafolio" class="portafolio">
+            <div class="container">
+                <h2 class="section-title reveal">Proyectos Destacados</h2>
+                <p class="section-subtitle reveal">Transformando negocios en Cumaná y Venezuela con soluciones tecnológicas</p>
+                
+                <div class="portafolio-filters reveal">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="web">Desarrollo Web</button>
+                    <button class="filter-btn" data-filter="redes">Redes</button>
+                    <button class="filter-btn" data-filter="seguridad">Seguridad</button>
+                </div>
+                
+                <div class="portafolio-grid">
+                    <!-- Proyecto 1 -->
+                    <div class="portafolio-item reveal" data-category="web" data-delay="100">
+                        <div class="portafolio-image">
+                            <img src="assets/proyecto1.jpg" alt="Sistema de gestión para hotel" loading="lazy">
+                            <div class="portafolio-overlay">
+                                <h3>Sistema de Gestión Hotelera</h3>
+                                <p>Plataforma web para reservas y administración</p>
+                                <a href="#" class="btn-small">Ver proyecto</a>
+                            </div>
                         </div>
                     </div>
                     
-                    <!-- Mapa de ubicación -->
-               <div class="contacto-map">
- <div class="contacto-map">
-    <div class="map-placeholder">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15653.123456789!2d-64.1925!3d10.4631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2e0b8c2e0b8c2e%3A0x123456789abcdef!2sCuman%C3%A1%2C%20Venezuela!5e0!3m2!1ses!2s!4v1234567890!5m2!1ses!2s" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Cumaná, Estado Sucre, Venezuela">
-                                   </iframe>
-                                </div>
+                    <!-- Proyecto 2 -->
+                    <div class="portafolio-item reveal" data-category="redes" data-delay="200">
+                        <div class="portafolio-image">
+                            <img src="assets/proyecto2.jpg" alt="Red corporativa" loading="lazy">
+                            <div class="portafolio-overlay">
+                                <h3>Red Corporativa</h3>
+                                <p>Implementación de red para empresa petrolera</p>
+                                <a href="#" class="btn-small">Ver proyecto</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Proyecto 3 -->
+                    <div class="portafolio-item reveal" data-category="seguridad" data-delay="300">
+                        <div class="portafolio-image">
+                            <img src="assets/proyecto3.jpg" alt="Cámaras de seguridad" loading="lazy">
+                            <div class="portafolio-overlay">
+                                <h3>Sistema de Vigilancia</h3>
+                                <p>Cámaras IP para centro comercial</p>
+                                <a href="#" class="btn-small">Ver proyecto</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Proyecto 4 -->
+                    <div class="portafolio-item reveal" data-category="web" data-delay="400">
+                        <div class="portafolio-image">
+                            <img src="assets/proyecto4.jpg" alt="Tienda online" loading="lazy">
+                            <div class="portafolio-overlay">
+                                <h3>E-commerce</h3>
+                                <p>Tienda online para emprendimiento local</p>
+                                <a href="#" class="btn-small">Ver proyecto</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- NOSOTROS SECTION -->
+        <section id="nosotros" class="nosotros">
+            <div class="container">
+                <div class="nosotros-grid">
+                    <div class="nosotros-content reveal-left">
+                        <h2 class="section-title">Sobre MagosysTech</h2>
+                        <p class="nosotros-text">Somos un equipo de profesionales apasionados por la tecnología, con sede en Cumaná, Estado Sucre. Desde 2020, ayudamos a empresas venezolanas a potenciar sus negocios con soluciones IT innovadoras y adaptadas a sus necesidades reales.</p>
+                        
+                        <div class="nosotros-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Clientes satisfechos</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">100+</span>
+                                <span class="stat-label">Proyectos completados</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-label">Soporte disponible</span>
+                            </div>
+                        </div>
+                        
+                        <div class="nosotros-features">
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Profesionales certificados</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Soporte en español</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Precios competitivos</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nosotros-image reveal-right">
+                        <img src="assets/equipo.jpg" alt="Equipo MagosysTech" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIOS SECTION -->
+        <section id="testimonios" class="testimonios">
+            <div class="container">
+                <h2 class="section-title reveal">Lo que dicen nuestros clientes</h2>
+                <p class="section-subtitle reveal">Empresas en Cumaná y Venezuela que confían en nosotros</p>
+                
+                <div class="testimonios-grid">
+                    <!-- Testimonio 1 -->
+                    <div class="testimonial-card reveal" data-delay="100">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"MagosysTech transformó completamente nuestra infraestructura de red. Ahora tenemos conectividad estable en toda la empresa. Altamente recomendados."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="assets/cliente1.jpg" alt="María González" loading="lazy">
+                            <div>
+                                <h4>María González</h4>
+                                <p>Gerente - Hotel Cumaná</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonio 2 -->
+                    <div class="testimonial-card reveal" data-delay="200">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"El sistema de cámaras que instalaron nos da tranquilidad 24/7. La calidad de imagen y el soporte remoto son excelentes."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="assets/cliente2.jpg" alt="Carlos Rodríguez" loading="lazy">
+                            <div>
+                                <h4>Carlos Rodríguez</h4>
+                                <p>Dueño - Comercio Local</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonio 3 -->
+                    <div class="testimonial-card reveal" data-delay="300">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"Desarrollaron nuestra página web exactamente como la imaginamos. Profesionales, puntuales y con excelente servicio post-venta."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="assets/cliente3.jpg" alt="Ana Martínez" loading="lazy">
+                            <div>
+                                <h4>Ana Martínez</h4>
+                                <p>Emprendedora - Tienda Online</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO SECTION -->
+        <section id="contacto" class="contacto">
+            <div class="container">
+                <h2 class="section-title reveal">Contáctanos</h2>
+                <p class="section-subtitle reveal">¿Tienes un proyecto en mente? Escríbenos y te responderemos en máximo 24 horas</p>
+                
+                <div class="contacto-grid">
+                    <!-- Formulario -->
+                    <div class="contacto-form-wrapper reveal-left">
+                        <form id="contactForm" class="contacto-form">
+                            <div class="form-group">
+                                <label for="nombre">Nombre completo *</label>
+                                <input type="text" id="nombre" name="nombre" required placeholder="Juan Pérez">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" required placeholder="juan@empresa.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefono">Teléfono</label>
+                                    <input type="tel" id="telefono" name="telefono" placeholder="0412-1234567">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="servicio">Servicio de interés</label>
+                                <select id="servicio" name="servicio">
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="soporte">Soporte Técnico</option>
+                                    <option value="desarrollo">Desarrollo Web</option>
+                                    <option value="redes">Redes y Conectividad</option>
+                                    <option value="seguridad">Cámaras de Seguridad</option>
+                                    <option value="consultoria">Consultoría TI</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje *</label>
+                                <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntanos tu proyecto..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-block">Enviar mensaje</button>
+                        </form>
+                        <div id="formMessage" class="form-message"></div>
+                    </div>
+                    
+                    <!-- Info de contacto -->
+                    <div class="contacto-info reveal-right">
+                        <div class="info-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Visítanos</h3>
+                            <p>Cumaná, Estado Sucre<br>Venezuela</p>
+                        </div>
+                        <div class="info-card">
+                            <i class="fas fa-phone-alt"></i>
+                            <h3>WhatsApp</h3>
+                            <p>+58 412-1234567</p>
+                            <a href="https://wa.me/584121234567?text=Hola%20MagosysTech%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios" class="btn-whatsapp-small" target="_blank">Escribir ahora</a>
+                        </div>
+                        <div class="info-card">
+                            <i class="fas fa-clock"></i>
+                            <h3>Horario</h3>
+                            <p>Lunes a Viernes: 8am - 6pm<br>Sábados: 9am - 1pm</p>
+                        </div>
+                        <div class="info-card">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Email</h3>
+                            <p>info@magosystech.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAPA SECTION -->
+        <section class="mapa">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15666.542286386604!2d-64.183953!3d10.463722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2d7f5b5b5b5b5b%3A0x5b5b5b5b5b5b5b5b!2sCuman%C3%A1%2C%20Venezuela!5e0!3m2!1ses!2s!4v1234567890"
+                width="100%" 
+                height="400" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
         </section>
     </main>
 
@@ -294,23 +399,65 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <span class="logo-bold">M</span>agosysTech
-                    <p>Tecnología que impulsa tu negocio</p>
+                    <img src="assets/logo-white.png" alt="MagosysTech" class="footer-logo">
+                    <p>Soluciones tecnológicas profesionales en Cumaná, Venezuela.</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/584121234567" target="_blank" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://instagram.com/magosystech" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
                 </div>
+                
                 <div class="footer-links">
-                    <a href="#inicio">Inicio</a>
-                    <a href="#servicios">Servicios</a>
-                    <a href="#clientes">Clientes</a>
-                    <a href="#contacto">Contacto</a>
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#portafolio">Portafolio</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#testimonios">Testimonios</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#">Desarrollo Web</a></li>
+                        <li><a href="#">Redes Corporativas</a></li>
+                        <li><a href="#">Cámaras de Seguridad</a></li>
+                        <li><a href="#">Soporte Técnico</a></li>
+                        <li><a href="#">Consultoría IT</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Recibe tips tecnológicos y ofertas</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>© 2024 MagosysTech - Servicios TI Profesionales. Todos los derechos reservados.</p>
+                <p>&copy; 2024 MagosysTech. Todos los derechos reservados.</p>
+                <p>Diseñado con <i class="fas fa-heart" style="color: var(--error);"></i> en Cumaná, Venezuela</p>
             </div>
         </div>
     </footer>
 
     <!-- JavaScript -->
-    <script src="js/main.js" defer></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
