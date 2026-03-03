@@ -1,0 +1,131 @@
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 968px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .contacto-wrapper,
+    .beneficios-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .clientes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    :root {
+        --spacing: 80px;
+    }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+    /* Menú Hamburguesa */
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--white);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        z-index: 1000;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .clientes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contacto-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .contacto-info {
+        padding-right: 0;
+    }
+    
+    .contacto-social {
+        justify-content: center;
+    }
+    
+    .map-placeholder iframe {
+        min-height: 300px;
+    }
+    
+    :root {
+        --spacing: 60px;
+    }
+    
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .contacto-title {
+        font-size: 2rem;
+    }
+    
+    .beneficios-grid {
+        gap: 2rem;
+    }
+    
+    .contacto-social {
+        flex-direction: column;
+    }
+    
+    .btn-wsp, .btn-ig {
+        text-align: center;
+    }
+}
