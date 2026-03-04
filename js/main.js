@@ -194,7 +194,7 @@ function sendToWhatsApp(formData) {
     
     const texto = `*Nuevo mensaje desde la web MagosysTech*%0A%0A*Nombre:* ${nombre}%0A*Email:* ${email}%0A*Teléfono:* ${telefono || 'No especificado'}%0A*Servicio:* ${servicio || 'No especificado'}%0A*Mensaje:* ${mensaje}`;
     
-    const whatsappUrl = `https://wa.me/584121234567?text=${texto}`;
+    const whatsappUrl = `https://wa.me/584248320442?text=${texto}`;
     window.open(whatsappUrl, '_blank');
 }
 
