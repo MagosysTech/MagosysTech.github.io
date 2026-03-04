@@ -3,7 +3,7 @@
 [![Website](https://img.shields.io/badge/website-magosystech.github.io-blue)](https://magosystech.github.io)
 [![Security Headers](https://img.shields.io/security-headers?url=https://magosystech.github.io)](https://securityheaders.com)
 
-Sitio web corporativo para MagosysTech, empresa de soluciones tecnológicas con sede en Buenos Aires.
+Sitio web corporativo para MagosysTech, empresa de soluciones tecnológicas con sede en Vemezuela.
 
 ## 🛡️ Seguridad Implementada
 
