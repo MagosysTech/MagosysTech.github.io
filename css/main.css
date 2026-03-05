@@ -6,13 +6,19 @@
     --secondary: #7c3aed;
     --accent: #06b6d4;
     
+    /* Colores generales (cambian con tema) */
     --dark: #0f172a;
     --gray-dark: #334155;
     --gray: #64748b;
     --gray-light: #e2e8f0;
-    
     --background: #f8fafc;
     --white: #ffffff;
+    
+    /* Colores FIJOS del footer (NO cambian con el tema) */
+    --footer-bg: #0f172a;           /* mismo que --dark en modo normal */
+    --footer-text: #ffffff;
+    --footer-text-soft: rgba(255, 255, 255, 0.8);
+    --footer-border: rgba(255, 255, 255, 0.1);
     
     --success: #10b981;
     --warning: #f59e0b;
@@ -29,7 +35,7 @@
     --transition: all 0.3s ease;
 }
 
-/* Modo Oscuro */
+/* Modo Oscuro - solo cambian las variables generales */
 [data-theme="dark"] {
     --primary: #3b82f6;
     --primary-dark: #2563eb;
@@ -39,6 +45,8 @@
     --gray-light: #1e293b;
     --background: #0f172a;
     --white: #1e293b;
+    
+    /* Las variables del footer NO se redefinen aquí, mantienen sus valores originales */
 }
 
 * {
@@ -705,7 +713,7 @@ p {
     color: var(--gray-dark);
     margin-bottom: 15px;
 }
-
+/* ===== Boton Whatsapp ===== */
 .btn-whatsapp-small {
     display: inline-block;
     background: #25D366;
@@ -718,6 +726,22 @@ p {
 }
 
 .btn-whatsapp-small:hover {
+    background: #128C7E;
+    transform: translateY(-2px);
+}
+/* ===== Boton Email ===== */
+.btn-email-small {
+    display: inline-block;
+    background: #25D366;
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.btn-email-small:hover {
     background: #128C7E;
     transform: translateY(-2px);
 }
@@ -736,8 +760,8 @@ p {
 
 /* ===== FOOTER ===== */
 .footer {
-    background: var(--dark);
-    color: white;
+    background: var(--footer-bg);        /* Siempre #0f172a */
+    color: var(--footer-text);           /* Siempre white */
     padding: 60px 0 20px;
 }
 
@@ -755,7 +779,7 @@ p {
 }
 
 .footer-brand p {
-    color: rgba(255,255,255,0.8);
+    color: var(--footer-text-soft);
     margin-bottom: 20px;
 }
 
@@ -772,17 +796,17 @@ p {
     height: 40px;
     background: rgba(255,255,255,0.1);
     border-radius: 50%;
-    color: white;
+    color: var(--footer-text);
     transition: var(--transition);
 }
 
 .social-links a:hover {
-    background: var(--primary);
+    background: var(--primary);           /* Usa el primary del tema actual */
     transform: translateY(-3px);
 }
 
 .footer h4 {
-    color: white;
+    color: var(--footer-text);
     margin-bottom: 20px;
 }
 
@@ -795,13 +819,13 @@ p {
 }
 
 .footer ul a {
-    color: rgba(255,255,255,0.8);
+    color: var(--footer-text-soft);
     text-decoration: none;
     transition: var(--transition);
 }
 
 .footer ul a:hover {
-    color: white;
+    color: var(--footer-text);
     padding-left: 5px;
 }
 
@@ -816,7 +840,7 @@ p {
     border: none;
     border-radius: 8px;
     background: rgba(255,255,255,0.1);
-    color: white;
+    color: var(--footer-text);
 }
 
 .newsletter-form input::placeholder {
@@ -828,7 +852,7 @@ p {
     background: var(--primary);
     border: none;
     border-radius: 8px;
-    color: white;
+    color: var(--footer-text);
     cursor: pointer;
     transition: var(--transition);
 }
@@ -840,7 +864,7 @@ p {
 .footer-bottom {
     text-align: center;
     padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid var(--footer-border);
 }
 
 .footer-bottom p {
