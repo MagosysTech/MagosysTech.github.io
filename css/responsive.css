@@ -287,6 +287,21 @@
         border-radius: 22px;
     }
 
+    .qr-share {
+        grid-template-columns: 104px minmax(0, 1fr);
+        gap: 18px;
+        padding: 14px;
+    }
+
+    .qr-share-image {
+        width: 104px;
+        height: 104px;
+    }
+
+    .qr-share-content h3 {
+        font-size: 1.12rem;
+    }
+
     .contact-intro h2 {
         font-size: 2.45rem;
     }
