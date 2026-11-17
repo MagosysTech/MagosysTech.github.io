@@ -8,7 +8,7 @@ ALLOWED_ORIGINS = "https://magosystech.github.io,http://localhost:8000,http://12
 [[d1_databases]]
 binding = "DB"
 database_name = "magosys-analytics"
-database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+database_id = "61540236-48de-406e-af48-5b61149839fb"
 
 [[ratelimits]]
 name = "VISIT_RATE_LIMITER"
