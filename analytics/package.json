@@ -1,0 +1,19 @@
+{
+  "name": "magosys-analytics-api",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:create": "wrangler d1 create magosys-analytics",
+    "db:apply:local": "wrangler d1 execute magosys-analytics --local --file=./schema.sql",
+    "db:apply:remote": "wrangler d1 execute magosys-analytics --remote --file=./schema.sql",
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "wrangler": "^4.36.0"
+  }
+}

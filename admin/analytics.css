@@ -1,0 +1,264 @@
+:root {
+    color-scheme: light;
+    --ink: #17243b;
+    --muted: #5d6b80;
+    --border: #dce4ef;
+    --surface: #ffffff;
+    --background: #f1f5f9;
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--ink);
+    line-height: 1.55;
+}
+
+.dashboard {
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 48px 0 64px;
+}
+
+.dashboard-header {
+    margin-bottom: 28px;
+}
+
+.back-link {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.eyebrow {
+    margin: 28px 0 4px;
+    color: var(--primary);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 8px;
+    font-size: clamp(1.9rem, 5vw, 2.8rem);
+    line-height: 1.15;
+}
+
+h2 {
+    margin-bottom: 18px;
+    font-size: 1.25rem;
+}
+
+.dashboard-header > p:last-child {
+    max-width: 760px;
+    color: var(--muted);
+}
+
+.panel,
+.summary-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 10px 28px rgba(23, 36, 59, 0.05);
+}
+
+.panel {
+    padding: 24px;
+}
+
+.connection-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.connection-form label {
+    margin-top: 6px;
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.api-endpoint {
+    display: grid;
+    gap: 6px;
+    margin-bottom: 4px;
+    font-size: 0.92rem;
+}
+
+.api-endpoint code {
+    overflow-wrap: anywhere;
+    color: var(--muted);
+}
+
+.connection-form input,
+.connection-form select {
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+    padding: 10px 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--ink);
+    font: inherit;
+}
+
+.connection-form input:focus,
+.connection-form select:focus {
+    outline: 3px solid rgba(37, 99, 235, 0.18);
+    border-color: var(--primary);
+}
+
+.primary-button {
+    min-height: 46px;
+    margin-top: 10px;
+    padding: 11px 20px;
+    background: var(--primary);
+    border: 0;
+    border-radius: 999px;
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background: var(--primary-dark);
+}
+
+.primary-button:disabled {
+    cursor: wait;
+    opacity: 0.7;
+}
+
+.privacy-note,
+.status {
+    margin: 14px 0 0;
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+.status:empty {
+    display: none;
+}
+
+.status[data-state="error"] {
+    color: #b42318;
+}
+
+.status[data-state="success"] {
+    color: #067647;
+}
+
+.summary-section {
+    margin: 32px 0;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.summary-card {
+    min-width: 0;
+    padding: 20px;
+}
+
+.summary-card > p {
+    margin-bottom: 12px;
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.summary-card > strong {
+    font-size: 2rem;
+}
+
+.device-totals,
+.daily-totals {
+    display: grid;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.device-totals li,
+.daily-totals li {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.table-scroll {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+    vertical-align: top;
+}
+
+th {
+    color: var(--muted);
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+td code {
+    overflow-wrap: anywhere;
+}
+
+.empty-state {
+    padding: 24px 10px;
+    color: var(--muted);
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    .dashboard {
+        padding-top: 28px;
+    }
+
+    .panel {
+        padding: 18px;
+    }
+
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .summary-card {
+        padding: 16px;
+    }
+}

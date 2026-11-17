@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="referrer" content="no-referrer">
+    <meta name="analytics-api-url" content="">
+    <title>Analítica de visitas | MagosysTech</title>
+    <link rel="stylesheet" href="analytics.css">
+    <script src="analytics.js" defer></script>
+</head>
+<body>
+    <main class="dashboard">
+        <header class="dashboard-header">
+            <a class="back-link" href="../index.html">Volver al sitio</a>
+            <p class="eyebrow">MagosysTech · Administración</p>
+            <h1>Analítica anónima de visitas</h1>
+            <p>Consulta páginas vistas, fechas, tipo general de dispositivo y origen del enlace. No se identifica a las personas ni se guardan sus direcciones IP.</p>
+        </header>
+
+        <section class="panel" aria-labelledby="connectionTitle">
+            <h2 id="connectionTitle">Conectar con la API</h2>
+            <form id="analyticsConnection" class="connection-form">
+                <p class="api-endpoint"><strong>URL de la API</strong><code id="apiUrlDisplay">Sin configurar</code></p>
+
+                <label for="adminToken">Token administrativo</label>
+                <input id="adminToken" name="adminToken" type="password" required autocomplete="off" spellcheck="false">
+
+                <label for="periodDays">Período del resumen</label>
+                <select id="periodDays" name="periodDays">
+                    <option value="7">Últimos 7 días</option>
+                    <option value="30" selected>Últimos 30 días</option>
+                    <option value="90">Últimos 90 días</option>
+                </select>
+
+                <button class="primary-button" type="submit">Consultar visitas</button>
+            </form>
+            <p class="privacy-note">El token se usa solo durante esta sesión de la página y no se guarda en el navegador.</p>
+            <p id="dashboardStatus" class="status" role="status" aria-live="polite"></p>
+        </section>
+
+        <section class="summary-section" aria-labelledby="summaryTitle">
+            <h2 id="summaryTitle">Resumen de actividad</h2>
+            <div class="summary-grid">
+                <article class="summary-card">
+                    <p>Visitas en el período</p>
+                    <strong id="totalVisits">—</strong>
+                </article>
+                <article class="summary-card">
+                    <p>Dispositivos</p>
+                    <ul id="deviceTotals" class="device-totals"></ul>
+                </article>
+                <article class="summary-card">
+                    <p>Actividad por día</p>
+                    <ul id="dailyTotals" class="daily-totals"></ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="panel visits-panel" aria-labelledby="visitsTitle">
+            <h2 id="visitsTitle">Registros recientes</h2>
+            <div class="table-scroll">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Fecha y hora</th>
+                            <th scope="col">Página</th>
+                            <th scope="col">Dispositivo</th>
+                            <th scope="col">Origen</th>
+                            <th scope="col">Evento</th>
+                        </tr>
+                    </thead>
+                    <tbody id="visitRows">
+                        <tr><td class="empty-state" colspan="5">Conecta con la API para consultar los registros.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

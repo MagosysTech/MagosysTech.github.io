@@ -3,462 +3,301 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Meta Tags SEO -->
-    <title>MagosysTech | Soluciones IT en Cumaná, Venezuela</title>
-    <meta name="description" content="Expertos en soporte técnico y automatización soluciones tecnológicas para empresas en Cumaná y todo el oriente de Venezuela. ¡Transformamos tu negocio!">
-    <meta name="keywords" content="soporte técnico Cumaná, desarrollo web Venezuela, soluciones IT, Licencias">
+    <meta name="theme-color" content="#f7f9fc">
+    <title>MagosysTech | Tecnología y soporte en Buenos Aires</title>
+    <meta name="description" content="Servicio técnico, reparación de teléfonos y equipos electrónicos, automatización y venta de equipos en Buenos Aires. Hablemos de lo que necesitás.">
+    <meta name="keywords" content="servicio técnico, reparación de teléfonos, automatización, sistemas, equipos electrónicos, Buenos Aires">
     <meta name="author" content="MagosysTech">
     <meta name="robots" content="index, follow">
+    <meta name="analytics-api-url" content="">
 
-    <!-- Open Graph / Redes Sociales -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://magosystech.github.io/MagosysTechWeb/">
-    <meta property="og:title" content="MagosysTech - Soluciones IT Profesionales">
-    <meta property="og:description" content="Transformamos tu negocio con tecnología de vanguardia en Cumaná, Venezuela">
-    <meta property="og:image" content="https://magosystech.github.io/MagosysTechWeb/assets/og-image.jpg">
+    <meta property="og:url" content="https://magosystech.github.io/">
+    <meta property="og:title" content="MagosysTech | Tecnología y soporte en Buenos Aires">
+    <meta property="og:description" content="Servicio técnico, sistemas y equipos con atención cercana en Buenos Aires.">
+    <meta property="og:image" content="https://magosystech.github.io/assets/icons/hero.webp">
+    <meta property="og:image:alt" content="Identidad visual de MagosysTech">
 
-    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="MagosysTech - Soluciones IT">
-    <meta name="twitter:description" content="Expertos en tecnología para tu negocio">
+    <meta name="twitter:title" content="MagosysTech | Tecnología y soporte en Buenos Aires">
+    <meta name="twitter:description" content="Servicio técnico, sistemas y equipos con atención cercana en Buenos Aires.">
+    <meta name="twitter:image" content="https://magosystech.github.io/assets/icons/hero.webp">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon/favicon-16x16.png">
-<link rel="apple-touch-icon" href="assets/icons/favicon/apple-touch-icon.png">
-
-    <!-- Google Analytics (reemplaza G-XXXXXXXXXX con tu ID) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-    </script>
-
-    <!-- CSS -->
+    <link rel="icon" href="assets/icons/favicon.ico">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/analytics.css">
 </head>
 <body>
-    <!-- HEADER -->
-    <header class="header">
-        <div class="container header-container">
-            <div class="logo">
-                <a href="#inicio">
-                    <img src="assets/icons/logo.webp" alt="MagosysTech Logo">
-                </a>
-            </div>
-            
-            <button class="menu-toggle" aria-label="Abrir menú">
-                <i class="fas fa-bars"></i>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="#inicio" aria-label="MagosysTech, ir al inicio">
+                <img class="brand-mark" src="assets/icons/logo-white.webp" alt="" width="1536" height="1024">
+                <span>Magosys<span class="brand-accent">Tech</span></span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-navigation">
+                <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
-            
-            <nav class="nav-menu">
+
+            <nav class="nav-menu" id="primary-navigation" aria-label="Navegación principal">
                 <ul class="nav-list">
-                    <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#portafolio">Portafolio</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#proceso">Cómo trabajamos</a></li>
+                    <li><a href="#socios">Socios</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
-            
-            <button class="theme-switch" aria-label="Cambiar tema">
-                <i class="fas fa-moon"></i>
-            </button>
+
+            <a class="button button-small header-cta" href="https://wa.me/541158471492?text=Hola%20MagosysTech%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener noreferrer">
+                Hablemos <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
         </div>
     </header>
 
     <main>
-        <!-- HERO SECTION -->
-        <section id="inicio" class="hero">
-            <div class="container hero-container">
-                <div class="hero-content reveal-left">
-                    <h1>Soluciones IT profesionales <span class="highlight">Venezolanas </span> para tu negocio</h1>
-                    <p>Especialidad en Automatización, Licencias y Servicio Técnico. Transformamos tu empresa con tecnología de vanguardia.</p>
-                    <div class="hero-buttons">
-                        <a href="#contacto" class="btn btn-primary">Solicitar asesoría</a>
-                        <a href="#servicios" class="btn btn-outline">Ver servicios</a>
+        <section class="hero" id="inicio">
+            <div class="container hero-layout">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span class="eyebrow-dot"></span> Tecnología y soporte · Buenos Aires</p>
+                    <h1>Tecnología que resuelve. <span>Atención que acompaña.</span></h1>
+                    <p class="hero-description">Reparamos teléfonos y equipos electrónicos, simplificamos procesos y te ayudamos a elegir la tecnología que necesitás.</p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="https://wa.me/541158471492?text=Hola%20MagosysTech%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i> Consultar por WhatsApp
+                        </a>
+                        <a class="text-link" href="#servicios">Conocer servicios <i class="fas fa-arrow-down" aria-hidden="true"></i></a>
                     </div>
+                    <p class="hero-location"><i class="fas fa-location-dot" aria-hidden="true"></i> Atención cercana para personas y negocios en Argentina</p>
                 </div>
-                <div class="hero-image reveal-right">
-                    <img src="assets/icons/hero.webp" alt="Soluciones tecnológicas" loading="lazy">
+
+                <div class="hero-art" aria-label="Identidad visual de MagosysTech">
+                    <div class="hero-art-glow"></div>
+                    <div class="hero-art-card">
+                        <img src="assets/icons/hero.webp" alt="Emblema de MagosysTech: tecnología, sistemas y soluciones" width="1536" height="1024" fetchpriority="high">
+                    </div>
+                    <div class="hero-note">
+                        <span class="hero-note-icon"><i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i></span>
+                        <span><strong>Soluciones prácticas</strong><small>Para necesidades reales</small></span>
+                    </div>
+                    <span class="hero-art-orbit hero-art-orbit-one"></span>
+                    <span class="hero-art-orbit hero-art-orbit-two"></span>
+                    <span class="hero-gear hero-gear-one" aria-hidden="true"><i class="fas fa-gear"></i></span>
+                    <span class="hero-gear hero-gear-two" aria-hidden="true"><i class="fas fa-gear"></i></span>
                 </div>
             </div>
         </section>
 
-        <!-- SERVICIOS SECTION -->
-        <section id="servicios" class="servicios">
+        <section class="services section-space" id="servicios">
             <div class="container">
-                <h2 class="section-title reveal">Nuestros Servicios</h2>
-                <p class="section-subtitle reveal">Soluciones tecnológicas adaptadas a las necesidades de tu empresa</p>
-                
-                <div class="servicios-grid">
-                    <div class="service-card reveal" data-delay="100">
-                        <div class="service-icon">
-                            <i class="fas fa-laptop-code"></i>
+                <div class="section-heading">
+                    <p class="eyebrow">Qué hacemos</p>
+                    <h2>Un equipo, tres formas de ayudarte.</h2>
+                    <p>Elegí el área que necesitás y conversemos sobre el próximo paso.</p>
+                </div>
+
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-card-top">
+                            <span class="service-number">01</span>
+                            <span class="service-icon"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i></span>
                         </div>
-                        <h3>Especialidad en Automatización</h3>
-                        <p>Automatización a medida de tu negocio.</p>
-                        <a href="#" class="service-link">Ver más <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    
-                    <div class="service-card reveal" data-delay="200">
-                        <div class="service-icon">
-                            <i class="fas fa-network-wired"></i>
+                        <p class="service-kicker">Reparación</p>
+                        <h3>Servicio técnico</h3>
+                        <p>Diagnóstico y reparación de teléfonos, computadoras y equipos electrónicos. Te explicamos las alternativas antes de avanzar.</p>
+                        <ul class="service-details">
+                            <li>Celulares y computadoras</li>
+                            <li>Equipos electrónicos</li>
+                            <li>Orientación sobre la falla</li>
+                        </ul>
+                        <a class="service-link" href="https://wa.me/541158471492?text=Hola%2C%20quiero%20consultar%20por%20la%20reparaci%C3%B3n%20de%20un%20equipo." target="_blank" rel="noopener noreferrer">
+                            Consultar reparación <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
+
+                    <article class="service-card service-card-featured">
+                        <div class="service-card-top">
+                            <span class="service-number">02</span>
+                            <span class="service-icon"><i class="fas fa-gears" aria-hidden="true"></i></span>
                         </div>
-                        <h3>Licencias Oficiales</h3>
-                        <p>Licencias de software a precios accesibles</p>
-                        <a href="#" class="service-link">Ver más <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    
-                    <div class="service-card reveal" data-delay="300">
-                        <div class="service-icon">
-                            <i class="fas fa-shield-alt"></i>
+                        <p class="service-kicker">Optimización</p>
+                        <h3>Automatización y sistemas</h3>
+                        <p>Herramientas digitales para ordenar tareas, reducir pasos manuales y acompañar la operación de tu negocio.</p>
+                        <ul class="service-details">
+                            <li>Automatización de tareas</li>
+                            <li>Sistemas para comercios</li>
+                            <li>Asesoramiento tecnológico</li>
+                        </ul>
+                        <a class="service-link" href="https://wa.me/541158471492?text=Hola%2C%20quiero%20consultar%20por%20automatizaci%C3%B3n%20y%20sistemas." target="_blank" rel="noopener noreferrer">
+                            Conversar sobre mi negocio <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-card-top">
+                            <span class="service-number">03</span>
+                            <span class="service-icon"><i class="fas fa-laptop" aria-hidden="true"></i></span>
                         </div>
-                        <h3>Servicio Técnico</h3>
-                        <p> Reparación de equipos de computo, dispositivos electrónicos , soporte remoto y presencial</p>
-                        <a href="#" class="service-link">Ver más <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    
-                    <div class="service-card reveal" data-delay="400">
-                        <div class="service-icon">
-                            <i class="fas fa-headset"></i>
-                        </div>
-                        <h3>Soporte Técnico</h3>
-                        <p>Mantenimiento preventivo y correctivo</p>
-                        <a href="#" class="service-link">Ver más <i class="fas fa-arrow-right"></i></a>
-                    </div>
+                        <p class="service-kicker">Equipamiento</p>
+                        <h3>Equipos y accesorios</h3>
+                        <p>Asesoramiento para encontrar equipos y productos electrónicos acordes al uso y al presupuesto que tenés en mente.</p>
+                        <ul class="service-details">
+                            <li>Teléfonos y computadoras</li>
+                            <li>Accesorios y electrónica</li>
+                            <li>Consulta de disponibilidad</li>
+                        </ul>
+                        <a class="service-link" href="https://wa.me/541158471492?text=Hola%2C%20quiero%20consultar%20por%20equipos%20y%20productos%20electr%C3%B3nicos." target="_blank" rel="noopener noreferrer">
+                            Consultar productos <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- PORTAFOLIO SECTION -->
-        <section id="portafolio" class="portafolio">
+        <section class="process section-space" id="proceso">
+            <div class="container process-layout">
+                <div class="section-heading process-heading">
+                    <p class="eyebrow">Una forma simple de avanzar</p>
+                    <h2>Primero entendemos. Después resolvemos.</h2>
+                    <p>Sin vueltas ni soluciones genéricas: cada consulta empieza por escuchar qué necesitás.</p>
+                    <a class="text-link" href="#contacto">Empezar una consulta <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+
+                <ol class="process-list">
+                    <li class="process-step">
+                        <span class="process-index">01</span>
+                        <div>
+                            <h3>Nos contás</h3>
+                            <p>Compartís el problema, la idea o el equipo que estás buscando.</p>
+                        </div>
+                    </li>
+                    <li class="process-step">
+                        <span class="process-index">02</span>
+                        <div>
+                            <h3>Evaluamos opciones</h3>
+                            <p>Revisamos el contexto y te explicamos posibles caminos con claridad.</p>
+                        </div>
+                    </li>
+                    <li class="process-step">
+                        <span class="process-index">03</span>
+                        <div>
+                            <h3>Acordamos el siguiente paso</h3>
+                            <p>Avanzamos con una propuesta concreta y acorde a lo que necesitás.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="partners section-space" id="socios">
             <div class="container">
-                <h2 class="section-title reveal">Proyectos Destacados</h2>
-                <p class="section-subtitle reveal">Transformando negocios en Cumaná y Venezuela con soluciones tecnológicas</p>
-                
-                <div class="portafolio-filters reveal">
-                    <button class="filter-btn active" data-filter="all">Todos</button>
-                    <button class="filter-btn" data-filter="web">Automatización </button>
-                    <button class="filter-btn" data-filter="licencias">Licencias</button>
-                    <button class="filter-btn" data-filter="serviciotecnico">Servicio Técnico</button>
+                <div class="section-heading partners-heading">
+                    <p class="eyebrow">Una red que suma</p>
+                    <h2>Conocé a nuestros socios.</h2>
+                    <p>Equipos con distintas especialidades que comparten una misma idea: acercar soluciones útiles y atención cercana.</p>
                 </div>
-                
-                <div class="portafolio-grid">
-                    <!-- Proyecto 1 -->
-                    <div class="portafolio-item reveal" data-category="web" data-delay="100">
-                        <div class="portafolio-image">
-                            <img src="assets/icons/proyecto1.webp" alt="Proximamente" loading="lazy">
-                            <div class="portafolio-overlay">
-                                <h3>Proximamente</h3>
-                                <p>Proximamente</p>
-                                <a href="#" class="btn-small">Ver proyecto</a>
-                            </div>
+
+                <div class="partners-grid">
+                    <article class="partner-card">
+                        <div class="partner-logo">
+                            <img src="assets/icons/socio-equipos.webp" alt="Identidad visual de KAFTech" width="400" height="268" loading="lazy" decoding="async">
                         </div>
-                    </div>
-                    
-                    <!-- Proyecto 2 -->
-                    <div class="portafolio-item reveal" data-category="licencias" data-delay="200">
-                        <div class="portafolio-image">
-                            <img src="assets/icons/proyecto2.webp" alt="Proximamente" loading="lazy">
-                            <div class="portafolio-overlay">
-                                <h3>Proximamente</h3>
-                                <p>Proximamente</p>
-                                <a href="#" class="btn-small">Ver proyecto</a>
-                            </div>
+                        <p class="partner-category">Equipos y tecnología</p>
+                        <h3>KAFTech</h3>
+                    </article>
+
+                    <article class="partner-card">
+                        <div class="partner-logo">
+                            <img src="assets/icons/socio-automatizacion.webp" alt="Identidad visual de 4K Multiservicios" width="720" height="400" loading="lazy" decoding="async">
                         </div>
-                    </div>
-                    
-                    <!-- Proyecto 3 -->
-                    <div class="portafolio-item reveal" data-category="serviciotecnico" data-delay="300">
-                        <div class="portafolio-image">
-                            <img src="assets/icons/proyecto3.webp" alt="Proximamente" loading="lazy">
-                            <div class="portafolio-overlay">
-                                <h3>Proximamente</h3>
-                                <p>Proximamente</p>
-                                <a href="#" class="btn-small">Ver proyecto</a>
-                            </div>
+                        <p class="partner-category">Servicios multiservicios</p>
+                        <h3>4K Multiservicios</h3>
+                    </article>
+
+                    <article class="partner-card partner-card-brand">
+                        <div class="partner-logo">
+                            <img src="assets/icons/socio-soporte.webp" alt="Emblema de MagosysTech" width="720" height="400" loading="lazy" decoding="async">
                         </div>
-                    </div>
-                    
-                    <!-- Proyecto 4 -->
-                    <div class="portafolio-item reveal" data-category="web" data-delay="400">
-                        <div class="portafolio-image">
-                            <img src="assets/icons/proyecto4.webp" alt="Tienda online" loading="lazy">
-                            <div class="portafolio-overlay">
-                                <h3>Proximamente</h3>
-                                <p>Proximamente</p>
-                                <a href="#" class="btn-small">Ver proyecto</a>
-                            </div>
-                        </div>
-                    </div>
+                        <p class="partner-category">Soporte y soluciones IT</p>
+                        <h3>MagosysTech</h3>
+                    </article>
                 </div>
+
+                <p class="founder-credit">MagosysTech · Fundador: <strong>Rosheed Mago</strong></p>
             </div>
         </section>
 
-        <!-- NOSOTROS SECTION -->
-        <section id="nosotros" class="nosotros">
+        <section class="contact section-space" id="contacto">
             <div class="container">
-                <div class="nosotros-grid">
-                    <div class="nosotros-content reveal-left">
-                        <h2 class="section-title">Sobre MagosysTech</h2>
-                        <p class="nosotros-text">Somos un equipo de profesionales apasionados por la tecnología, con sede en Cumaná, Estado Sucre. Desde 2020, ayudamos a empresas venezolanas a potenciar sus negocios con soluciones IT innovadoras y adaptadas a sus necesidades reales.</p>
-                        
-                        <div class="nosotros-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">50+</span>
-                                <span class="stat-label">Clientes satisfechos</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">100+</span>
-                                <span class="stat-label">Proyectos completados</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">24/7</span>
-                                <span class="stat-label">Soporte disponible</span>
-                            </div>
-                        </div>
-                        
-                        <div class="nosotros-features">
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Profesionales certificados</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Soporte en español</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Precios competitivos</span>
-                            </div>
-                        </div>
+                <div class="contact-panel">
+                    <div class="contact-intro">
+                        <p class="eyebrow eyebrow-light">Hablemos</p>
+                        <h2>Contanos qué necesitás.</h2>
+                        <p>Una consulta es un buen primer paso. Escribinos y vemos juntos cómo podemos ayudarte.</p>
+                        <a class="button button-light" href="https://wa.me/541158471492?text=Hola%20MagosysTech%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i> Escribir por WhatsApp
+                        </a>
                     </div>
-                    
-                    <div class="nosotros-image reveal-right">
-                        <img src="assets/icons/equipo.webp" alt="Equipo MagosysTech" loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- TESTIMONIOS SECTION -->
-        <section id="testimonios" class="testimonios">
-            <div class="container">
-                <h2 class="section-title reveal">Lo que dicen nuestros clientes</h2>
-                <p class="section-subtitle reveal">Negocios en Cumaná y Venezuela que confían en nosotros</p>
-                
-                <div class="testimonios-grid">
-                    <!-- Testimonio 1 -->
-                    <div class="testimonial-card reveal" data-delay="100">
-                        <div class="testimonial-content">
-                            <i class="fas fa-quote-left"></i>
-                            <p>"MagosysTech transformó completamente nuestra infraestructura de negocios. Ahora tenemos nuestras cuentas estables en toda la organización. Altamente recomendados."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="assets/icons/cliente1.webp" alt="cliente" loading="lazy">
-                            <div>
-                                <h4>Patricio Estrellado</h4>
-                                <p>Dueño - Comercio Local</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Testimonio 2 -->
-                    <div class="testimonial-card reveal" data-delay="200">
-                        <div class="testimonial-content">
-                            <i class="fas fa-quote-left"></i>
-                            <p>"El sistema que desarrollaron para nuestro almacen nos ayudo mucho a mejorar nuestros procesos y ahorrar costos de producción"</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="assets/icons/cliente2.webp" alt="cliente" loading="lazy">
-                            <div>
-                                <h4>Sherk Rodríguez</h4>
-                                <p>Dueño - Comercio Local</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Testimonio 3 -->
-                    <div class="testimonial-card reveal" data-delay="300">
-                        <div class="testimonial-content">
-                            <i class="fas fa-quote-left"></i>
-                            <p>"Lograron automatizar nuestro negocio exactamente como la imaginamos. He de decir que son profesionales, puntuales y con excelente servicio post-venta."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="assets/icons/cliente3.webp" alt="Ana Martínez" loading="lazy">
-                            <div>
-                                <h4>Jose Luis UwU</h4>
-                                <p>Emprendedora - Tienda Online</p>
-                            </div>
+                    <div class="contact-options">
+                        <a class="contact-option" href="mailto:magosystech@gmail.com">
+                            <span class="contact-option-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+                            <span><small>Correo electrónico</small><strong>magosystech@gmail.com</strong></span>
+                            <i class="fas fa-arrow-up-right-from-square contact-option-arrow" aria-hidden="true"></i>
+                        </a>
+                        <a class="contact-option" href="tel:+541158471492">
+                            <span class="contact-option-icon"><i class="fas fa-phone" aria-hidden="true"></i></span>
+                            <span><small>Teléfono / WhatsApp</small><strong>+54 11 5847-1492</strong></span>
+                            <i class="fas fa-arrow-up-right-from-square contact-option-arrow" aria-hidden="true"></i>
+                        </a>
+                        <div class="contact-option contact-option-static">
+                            <span class="contact-option-icon"><i class="fas fa-location-dot" aria-hidden="true"></i></span>
+                            <span><small>Estamos en</small><strong>Buenos Aires, Argentina</strong></span>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- CONTACTO SECTION -->
-        <section id="contacto" class="contacto">
-            <div class="container">
-                <h2 class="section-title reveal">Contáctanos</h2>
-                <p class="section-subtitle reveal">¿Tienes un proyecto en mente? Escríbenos y te responderemos en máximo 24 horas</p>
-                
-                <div class="contacto-grid">
-                    <!-- Formulario -->
-                    <div class="contacto-form-wrapper reveal-left">
-                        <form id="contactForm" class="contacto-form">
-                            <div class="form-group">
-                                <label for="nombre">Nombre completo *</label>
-                                <input type="text" id="nombre" name="nombre" required placeholder="Juan Pérez">
-                            </div>
-                            
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="email">Email *</label>
-                                    <input type="email" id="email" name="email" required placeholder="juan@empresa.com">
-                                </div>
-                                <div class="form-group">
-                                    <label for="telefono">Teléfono</label>
-                                    <input type="tel" id="telefono" name="telefono" placeholder="0424-0000000">
-                                </div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="servicio">Servicio de interés</label>
-                                <select id="servicio" name="servicio">
-                                    <option value="">Selecciona una opción</option>
-                                    <option value="soporte">Soporte Técnico</option>
-                                    <option value="desarrollo">Automatizacion</option>
-                                    <option value="licencias">Licencias</option>
-                                    <option value="serviciotecnico">Servicio tecnico</option>
-                                    <option value="consultoria">Consultoría TI</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="mensaje">Mensaje *</label>
-                                <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntanos tu proyecto..."></textarea>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary btn-block">Enviar mensaje</button>
-                        </form>
-                        <div id="formMessage" class="form-message"></div>
-                    </div>
-                    
-                    <!-- Info de contacto -->
-                    <div class="contacto-info reveal-right">
-                        <div class="info-card">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <h3>Visítanos</h3>
-                            <p>Cumaná, Estado Sucre<br>Venezuela</p>
-                        </div>
-                        <div class="info-card">
-                            <i class="fas fa-phone-alt"></i>
-                            <h3>WhatsApp</h3>
-                            <p>+58 424-8320442</p>
-                            <a href="https://wa.me/584248320442?text=Hola%20MagosysTech%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios" class="btn-whatsapp-small" target="_blank">Escribir ahora</a>
-                        </div>
-                        <div class="info-card">
-                            <i class="fas fa-clock"></i>
-                            <h3>Horario</h3>
-                            <p>Lunes a Viernes: 8am - 6pm<br>Sábados: 9am - 1pm</p>
-                        </div>
-                        <div class="info-card">
-                            <i class="fas fa-envelope"></i>
-                            <h3>Email</h3>
-                            <p>magosystech@gmail.com</p>
-                             <a href="mailto:magosystech@gmail.com?subject=Consulta%20desde%20la%20web&body=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20sus%20servicios." class="btn-email-small">Enviar un correo</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- MAPA SECTION -->
-        <section class="mapa">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15666.542286386604!2d-64.183953!3d10.463722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2d7f5b5b5b5b5b%3A0x5b5b5b5b5b5b5b5b!2sCuman%C3%A1%2C%20Venezuela!5e0!3m2!1ses!2s!4v1234567890"
-                width="100%" 
-                height="400" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
         </section>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="assets/icons/logo-white.webp" alt="MagosysTech" class="footer-logo">
-                    <p>Soluciones tecnológicas profesionales en Cumaná, Venezuela.</p>
-                    <div class="social-links">
-                        <a href="https://wa.me/584248320442" target="_blank" aria-label="WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="https://instagram.com/magosystech" target="_blank" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" target="_blank" aria-label="Facebook">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#" target="_blank" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="footer-links">
-                    <h4>Enlaces rápidos</h4>
-                    <ul>
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#servicios">Servicios</a></li>
-                        <li><a href="#portafolio">Portafolio</a></li>
-                        <li><a href="#nosotros">Nosotros</a></li>
-                        <li><a href="#testimonios">Testimonios</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-services">
-                    <h4>Servicios</h4>
-                    <ul>
-                        <li><a href="#">Desarrollo Web</a></li>
-                        <li><a href="#">Licencias</a></li>
-                        <li><a href="#">Servicio Técnico</a></li>
-                        <li><a href="#">Soporte Técnico</a></li>
-                        <li><a href="#">Consultoría IT</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-newsletter">
-                    <h4>Newsletter</h4>
-                    <p>Recibe tips tecnológicos y ofertas</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Tu email" required>
-                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                    </form>
-                </div>
+    <footer class="site-footer">
+        <div class="container footer-main">
+            <a class="brand footer-brand" href="#inicio" aria-label="MagosysTech, ir al inicio">
+                <img class="brand-mark" src="assets/icons/logo-white.webp" alt="" width="1536" height="1024" loading="lazy" decoding="async">
+                <span>Magosys<span class="brand-accent">Tech</span></span>
+            </a>
+            <p>Tecnología, soporte y soluciones con atención cercana en Buenos Aires.</p>
+            <div class="footer-socials">
+                <a href="https://wa.me/541158471492" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                </a>
+                <a href="https://instagram.com/magosystech" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 MagosysTech. Todos los derechos reservados.</p>
-                <p>Diseñado con <i class="fas fa-heart" style="color: var(--error);"></i> en Cumaná, Venezuela</p>
-            </div>
+        </div>
+        <div class="container footer-bottom">
+            <span>&copy; MagosysTech. Todos los derechos reservados.</span>
+            <button class="analytics-preferences" id="analyticsPreferences" type="button" hidden>Preferencias de privacidad</button>
+            <a href="#inicio">Volver arriba <i class="fas fa-arrow-up" aria-hidden="true"></i></a>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
+    <aside class="analytics-consent" id="analyticsConsent" role="dialog" aria-labelledby="analyticsConsentTitle" aria-describedby="analyticsConsentDescription" hidden>
+        <div class="analytics-consent-copy">
+            <h2 id="analyticsConsentTitle">Privacidad y visitas</h2>
+            <p id="analyticsConsentDescription">Si aceptas, registraremos de forma anónima la página visitada, la fecha, el tipo general de dispositivo y el dominio de procedencia. No guardamos tu nombre, correo, IP ni la dirección completa de la página de origen. Cloudflare procesa temporalmente la IP para limitar abusos; no se almacena en nuestros registros. Puedes rechazar o cambiar tu elección cuando quieras.</p>
+        </div>
+        <div class="analytics-consent-actions">
+            <button class="analytics-button analytics-button-secondary" id="rejectAnalytics" type="button">Rechazar</button>
+            <button class="analytics-button analytics-button-primary" id="acceptAnalytics" type="button">Aceptar analítica</button>
+        </div>
+        <p class="analytics-consent-status" id="analyticsConsentStatus" role="status" aria-live="polite"></p>
+    </aside>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/analytics.js" defer></script>
 </body>
 </html>

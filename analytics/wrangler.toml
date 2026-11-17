@@ -1,0 +1,22 @@
+name = "magosys-analytics-api"
+main = "src/worker.js"
+compatibility_date = "2026-11-16"
+
+[vars]
+ALLOWED_ORIGINS = "https://magosystech.github.io,http://localhost:8000,http://127.0.0.1:8000"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "magosys-analytics"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+
+[[ratelimits]]
+name = "VISIT_RATE_LIMITER"
+namespace_id = "1001"
+
+  [ratelimits.simple]
+  limit = 60
+  period = 60
+
+[triggers]
+crons = ["0 3 * * *"]

@@ -20,10 +20,15 @@ Sitio web corporativo para MagosysTech, empresa de soluciones tecnológicas con 
 - ✅ Diseño responsivo (mobile-first)
 - ✅ Página 404 personalizada
 - ✅ Favicon en múltiples formatos
+- ✅ Analítica anónima opcional con consentimiento y retención limitada
 
 ## 🚀 Despliegue
 
 Este sitio está desplegado en GitHub Pages y se actualiza automáticamente con cada push a la rama `master`.
+
+## 📊 API de analítica
+
+La API de registro de visitas usa Cloudflare Workers y D1; GitHub Pages solo sirve la web estática. Incluye consentimiento explícito, un panel administrativo protegido y no almacena nombres, correos ni direcciones IP. Consulta la [guía de despliegue de la API](./analytics/README.md) antes de activarla.
 
 ## 📄 Licencia
 
